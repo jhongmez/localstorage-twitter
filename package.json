@@ -1,0 +1,24 @@
+{
+  "name": "localstorage-twitter",
+  "version": "1.0.0",
+  "description": "Almacenando tweets con localstorage y usando Gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhongmez/localstorage-twitter.git"
+  },
+  "author": "Jhon Gómez Marín",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jhongmez/localstorage-twitter/issues"
+  },
+  "homepage": "https://github.com/jhongmez/localstorage-twitter#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-sass": "^4.1.0"
+  }
+}
