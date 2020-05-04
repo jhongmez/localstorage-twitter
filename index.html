@@ -4,9 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tweets - Localstorage</title>
+    <link rel="stylesheet" href="public/css/skeleton.css">
     <link rel="stylesheet" href="public/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <div id="contenido">
+        <div class="container">
+            <h3>Local Storage</h3>
+            <div class="row">
+                <div class="six columns">
+                    <label for="tweet">Tweet:</label>
+                    <form action="#" id="formulario">
+                        <label for="tweet"></label>
+                        <textarea id="tweet" class="u-full-width"></textarea>
+                        <input type="submit" class="button u-full-width button-primary" value="Agregar">
+                    </form>
+                </div>
+                <div class="six columns">
+                    <h4>Mis Tweets</h4>
+                    <div id="lista-tweets"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--#contenido-->
+    <script src="public/js/app.js"></script>
 </body>
 </html>

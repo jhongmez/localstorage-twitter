@@ -1,4 +1,5 @@
-$primary: green;
-body {
-    background-color: $primary;
-}
+@import 'variables';
+
+@import 'custom';
+
+@import 'tweet';

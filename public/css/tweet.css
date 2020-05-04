@@ -1,0 +1,11 @@
+h3, h4 {
+  text-align: center; }
+
+.container {
+  margin-top: 40px; }
+  .container .borrar-tweet,
+  .container .borrar-tweet:hover {
+    float: right;
+    cursor: pointer;
+    color: red;
+    font-weight: bold; }
