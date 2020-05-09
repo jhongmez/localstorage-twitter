@@ -42,13 +42,42 @@ function agregarTweet(e) {
     // agregamos en boton borrar con appendChild
     lista.appendChild(botonBorrar);
 
+    //añadir a localstorga
+    agregarTweetLocalStorage(tweet);
+
 }
 
+//Eliminar tweet del DOM
 function borrarTweet(e) {
     e.preventDefault();
 
     if(e.target.className === 'borrar-tweet') {
         console.log(e.target.parentElement.remove());
+        alert('Tweet eliminado');
     }
+
+}
+
+function agregarTweetLocalStorage(tweet) {
+    
+    let tweets;
+
+    tweets = obtenerTweetsLocalStorage();
+
+    tweets.push(tweet);
+
+    localStorage.setItem('tweets', JSON.stringify(tweets));
+
+}
+
+function obtenerTweetsLocalStorage() {
+    let tweets;
+
+    if (localStorage.getItem('tweets') === null) {
+        tweets = [];
+    } else {
+        tweets = JSON.parse(localStorage.getItem('tweets'));
+    }
+    return tweets;
 
 }
