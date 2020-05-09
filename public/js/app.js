@@ -14,6 +14,9 @@ function eventListeners() {
 
     //borrar tweets
     listaTweets.addEventListener('click', borrarTweet);
+
+    //Contenido cargado
+    document.addEventListener('DOMContentLoaded', cargarLocalStorage);
 }
 
 /*
@@ -47,6 +50,7 @@ function agregarTweet(e) {
 
 }
 
+
 //Eliminar tweet del DOM
 function borrarTweet(e) {
     e.preventDefault();
@@ -57,6 +61,31 @@ function borrarTweet(e) {
     }
 
 }
+
+
+function cargarLocalStorage() {
+    let tweets;
+
+    //traemos esta funcion para que nos cargue los tweets que fueron almacenados
+    tweets = obtenerTweetsLocalStorage();
+
+    tweets.forEach(function(tweet) {
+        // creamos el boton de eliminar
+        const botonBorrar = document.createElement('a');
+        botonBorrar.classList = 'borrar-tweet';  
+        botonBorrar.textContent = 'X';
+
+
+        // creamos una varible la cual nos va a agregar un elemento <li></li>
+        const lista = document.createElement('li');
+        lista.textContent = tweet;
+        // A esta variable le agregamos la propiedad appendChild la cual hace que su hijo sea lo que contiene lista
+        listaTweets.appendChild(lista);
+        // agregamos en boton borrar con appendChild
+        lista.appendChild(botonBorrar);
+    });
+}
+
 
 function agregarTweetLocalStorage(tweet) {
     
@@ -70,6 +99,8 @@ function agregarTweetLocalStorage(tweet) {
 
 }
 
+
+// se encarga de que hayan elementos en localstorage
 function obtenerTweetsLocalStorage() {
     let tweets;
 
